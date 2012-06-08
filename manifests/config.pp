@@ -4,7 +4,7 @@ class jenkins::config {
   file { $jenkins_config_file:
     ensure  => present,
     owner   => 'jenkins',
-    group   => 'jenkins'
+    group   => 'jenkins',
     mode    => 0644,
     source  => 'puppet:///modules/jenkins/config.xml',
     require => [
