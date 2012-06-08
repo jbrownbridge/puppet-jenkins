@@ -6,6 +6,7 @@ class jenkins {
   }
   include jenkins::repo
   include jenkins::package
+  include jenkins::user
   include jenkins::config
   include jenkins::service
   include jenkins::firewall
