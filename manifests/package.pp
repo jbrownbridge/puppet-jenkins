@@ -3,5 +3,12 @@ class jenkins::package {
     'jenkins' :
       ensure => installed;
   }
+
+  user {
+    'jenkins' :
+      ensure => present;
+  }
+
+  Package['jenkins'] -> User['jenkins']
 }
 
