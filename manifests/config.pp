@@ -12,7 +12,4 @@ class jenkins::config {
             User['jenkins'],
         ],
     }
-
-    # Add jenkins user shadow group for PAM authentication
-    User['jenkins'] { groups +> 'shadow' }
 }
