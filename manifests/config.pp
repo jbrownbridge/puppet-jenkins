@@ -12,5 +12,6 @@ class jenkins::config {
             User['jenkins'],
             Group['jenkins'],
         ],
+        notify  => Service['jenkins'],
     }
 }
