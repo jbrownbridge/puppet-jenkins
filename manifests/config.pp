@@ -8,7 +8,7 @@ class jenkins::config {
         mode    => 0644,
         source  => 'puppet:///jenkins/config.xml',
     }
-
+    
     # Add jenkins user shadow group for PAM authentication
     User['jenkins'] { groups +> 'shadow' }
 

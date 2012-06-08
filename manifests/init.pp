@@ -10,7 +10,7 @@ class jenkins {
   include jenkins::service
   include jenkins::firewall
 
-  Class['jenkins::repo'] -> Class['jenkins::package']
+  Class['jenkins::repo'] -> Class['jenkins::package'] -> User['jenkins'],
   -> Class['jenkins::config'] -> Class['jenkins::service']
 }
 # vim: ts=2 et sw=2 autoindent
