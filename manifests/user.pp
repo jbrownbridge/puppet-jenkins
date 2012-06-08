@@ -5,7 +5,6 @@ class jenkins::user {
   # Add jenkins user shadow group for PAM authentication
   user {
     'jenkins' :
-      group   => jenkins,
       ensure  => present,
       groups  => shadow,
   }
