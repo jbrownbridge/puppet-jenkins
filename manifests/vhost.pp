@@ -1,4 +1,4 @@
-define jenkins::vhost($vhost_name='*', $vhost_port=80) {
+class jenkins::vhost($vhost_name='*', $vhost_port=80) {
   include apache
   apache::vhost::proxy { 'jenkins':
     vhost_name  => $vhost_name,
