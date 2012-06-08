@@ -6,7 +6,7 @@ class jenkins::config {
         owner   => jenkins,
         group   => jenkins,
         mode    => 0644,
-        source  => 'puppet:///jenkins/config.xml',
+        source  => 'puppet:///modules/jenkins/config.xml',
         require => [
             Package['jenkins'],
             User['jenkins'],
