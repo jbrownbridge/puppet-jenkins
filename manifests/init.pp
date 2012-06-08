@@ -9,7 +9,6 @@ class jenkins($vhost_name='*', $vhost_port=80) {
   include jenkins::user
   include jenkins::config
   include jenkins::service
-  include jenkins::firewall
   
   class { 'jenkins::firewall': 
       vhost_port => $vhost_port,
