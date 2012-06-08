@@ -3,6 +3,9 @@ class jenkins::package {
     'jenkins' :
       ensure => installed;
   }
+
+  # Stub for group created by package
+  group { 'jenkins': }
   
   # Add jenkins user shadow group for PAM authentication
   user {
@@ -11,6 +14,6 @@ class jenkins::package {
       groups => shadow;
   }
 
-  Package['jenkins'] -> User['jenkins']
+  Package['jenkins'] -> Group['jenkins'] -> User['jenkins']
 }
 

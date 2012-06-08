@@ -10,6 +10,7 @@ class jenkins::config {
         require => [
             Package['jenkins'],
             User['jenkins'],
+            Group['jenkins'],
         ],
     }
 }
