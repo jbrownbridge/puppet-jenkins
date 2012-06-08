@@ -1,7 +1,4 @@
 class jenkins::user {
-  # Stub for group created by package
-  group { 'jenkins': }
-  
   # Add jenkins user shadow group for PAM authentication
   user {
     'jenkins' :
@@ -9,5 +6,5 @@ class jenkins::user {
       groups  => shadow,
   }
 
-  Package['jenkins'] -> Group['jenkins'] -> User['jenkins']
+  Package['jenkins'] -> User['jenkins']
 }
